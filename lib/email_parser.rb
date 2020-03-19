@@ -11,12 +11,14 @@ class EmailAddressParser
   end
   
   def parse
-    email_array = @email_addresses.split(/[, ]/).uniq
-    email_array.reject! {|element| element.empty?}
-    email_array
+    @email_addresses.split(/, | /).uniq
   end
   
 end
+
+  # email_array = @email_addresses.split(/[, ]/).uniq
+  # email_array.reject! {|element| element.empty?}
+  # email_array
 
 
 # email_addresses = "john@doe.com, person@somewhere.org"
