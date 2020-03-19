@@ -10,15 +10,28 @@ class EmailAddressParser
     @email_addresses = email_addresses
   end
   
+  #learn.co
   def parse
     @email_addresses.split(/, | /).uniq
   end
   
-end
-
+  #my original trying to get regex to work
   # email_array = @email_addresses.split(/[, ]/).uniq
   # email_array.reject! {|element| element.empty?}
   # email_array
+
+  #Ruth's 
+#   class EmailAddressParser
+#   attr_accessor :email 
+#   def initialize(emails) 
+#     @emails = emails
+#   end 
+#   def parse
+#     @emails.split(",").map { |email| email.split(" ") }.flatten.uniq
+#   end 
+# end 
+  
+end
 
 
 # email_addresses = "john@doe.com, person@somewhere.org"
